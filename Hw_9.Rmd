@@ -2,7 +2,7 @@
 title: "Hw_9"
 author: "Pranita"
 date: "`r Sys.Date()`"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
@@ -24,7 +24,9 @@ redlining <- read_csv("redlining.csv")
 
 ```
 
-#add name + github
+# name: Pranita Chaudhury
+# UT ID: pc28377
+# github: https://github.com/PranitaChau/Hw_9
 
 
 # Problem 1
@@ -216,8 +218,88 @@ a 0.03 standard-deviation change in the price that consumers in that ZIP code ex
 
 
 # Problem 3
+
 ## Part A
-```{r}
+This is true, as shown in the first graph (Fig A1) which compares the percent of minority residents in a ZIP code against the number of FAIR policies passed. This evidence shows that there is a positively related relationship with the number of FAIR policies and percentage of minority residents, so when the the minority percentage in a ZIP code goes up so does the number of FAIR policies passed. Additionally the simple linear regression performed below shows an r squared value of 0.5, so the data moderately fits the given equation indicating a positive moderately strong linear relationship.
 
 
-```
+## Part B
+This statement claims that the evidence suggests that the minority percentage and the age of the houses are both related to the number of FAIR policies in a ZIP code, and is true. This can be seen in Figure B1, where the housing age and the minority percentage of the community is compared. It shows a moderate positive linear relationship between the two, indicating that they are related and since we have established that the minority percentange is positively related with the number of FAIR policies passed, all three of them can be said to have positvely related interactions.
+
+
+
+## Part C
+The relationship between minority percentage and number of FAIR policies per 100 housing units is stronger in high-fire-risk ZIP codes than in low-fire-risk ZIP codes.
+This statement is true. The minority:fire_riskLow represents the effect of both being in a minority ZIP code and having a low fire risk, and since the variable for being in a minority ZIP code and having a high fire risk is not there we can assume it is the intercept. Since the 
+
+## Part D
+Even without controlling for any other variables, income “explains away” all the association between
+minority percentage and FAIR policy uptake.
+
+
+
+## Part E
+Minority percentage and number of FAIR policies are still associated at the ZIP code level, even after
+controlling for income, fire risk, and housing age.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This statement is true. We can see from the first plot (A1) that there
+is a positive correlation between residents who are minorities and
+residents using FAIR policies. The confidence interval for the slope is
+[0.009, 0.018]. Since the 95% confidence interval does not include 0,
+and the p-value is near 0, there is statistically significant evidence
+to conclude that ZIP codes with a higher percentage of minority
+residents tend to have more FAIR policies per 100 housing units.
+
+**B. The evidence suggests an interaction effect between minority
+percentage and the age of the housing stock in the way that these two
+variables are related to the number of FAIR policies in a ZIP code.**
+
+This is false. There is no model showing a joint interaction between
+minority percentage and age of the housing stock.
+
+**C. The relationship between minority percentage and number of FAIR
+policies per 100 housing units is stronger in high-fire-risk ZIP codes
+than in low-fire-risk ZIP codes.**
+
+This is false. We can see in the interaction for minorities with
+high-fire risk that the p-value is 0.839, which means it is not
+statistically significant. We cannot say that the slopes are that
+different. The p-value for minorities in the low-risk-fire group is
+0.035. This is statistically significant.
+
+**D. Even without controlling for any other variables, income “explains
+away” all the association between minority percentage and FAIR policy
+uptake.**
+
+This is false. Adding income into the regression reduces the coefficient
+slightly (from 0.014 to 0.01).
+
+**E. Minority percentage and number of FAIR policies are still
+associated at the ZIP code level, even after controlling for income,
+fire risk, and housing age.**
+
+This is true. We can see from the regression line that adjusts for all
+of these variables that the p-value is 0.006, so that means it is
+statistically significant. The coefficient for minority (0.008) is still
+positive.
+
+
+
+
