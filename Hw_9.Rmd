@@ -60,19 +60,16 @@ relationship = lm(skips ~ Opening + Solder + Solder:Opening, data=soldering)
 coef(relationship) |>
   round(0)
 
-
-
 #bootstrap model for each coeff  
 boot_skip <- do(100) * coef(lm(skips ~ Opening + Solder + Opening:Solder, data = resample(soldering)))
 
 #make it a table
 interval <- data.frame(apply(boot_skip, 2, quantile, probs = c(0.025, 0.975)))
-interval
+(interval)
 ```
+Regression model:
+Skips = 2(Opening_Medium) + 5(Opening_Small) + 2(SolderThin) - (Opening_Medium)(SolderThin) + 10 (Opening_Small)(SolderThin)
 
-
-
-## write here 
 
 
 
